@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>50 Mapas de Arcos Desconstruídos — Guia Visual de Montagem para Decoradoras</title>
+  <meta name="description" content="Aprenda a planejar arcos desconstruídos com diferentes formatos, volumes e combinações de balões! Tenha referências visuais para consultar quantidades, tamanhos em polegadas, distribuição e sequência de montagem.">
+  <meta name="theme-color" content="#D82E67">
+
+  <!-- Meta Pixel Code (Não-bloqueante) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+  var pixelLoaded = false;
+  function loadPixel(){
+    if(pixelLoaded) return;
+    pixelLoaded = true;
+    s=b.getElementsByTagName(e)[0];
+    if(s&&s.parentNode)s.parentNode.insertBefore(t,s);
+    else(b.head||b.body).appendChild(t);
+  }
+  ['touchstart', 'scroll', 'pointerdown', 'mousemove', 'keydown'].forEach(function(evt) {
+    f.addEventListener(evt, loadPixel, { once: true, passive: true });
+  });
+  setTimeout(loadPixel, 2800);
+  }(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1751702309218947');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1751702309218947&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="assets/hero-produto.webp" as="image" type="image/webp">
+
+  <style>
+    /* ===== FONTES POPPINS LOCAIS ===== */
+    @font-face{font-family:Poppins;src:url(fonts/Poppins-Regular.woff2) format('woff2'),url(fonts/Poppins-Regular.ttf) format('truetype');font-weight:400;font-display:swap}
+    @font-face{font-family:Poppins;src:url(fonts/Poppins-Medium.woff2) format('woff2'),url(fonts/Poppins-Medium.ttf) format('truetype');font-weight:500;font-display:swap}
+    @font-face{font-family:Poppins;src:url(fonts/Poppins-SemiBold.woff2) format('woff2'),url(fonts/Poppins-SemiBold.ttf) format('truetype');font-weight:600;font-display:swap}
+    @font-face{font-family:Poppins;src:url(fonts/Poppins-Bold.woff2) format('woff2'),url(fonts/Poppins-Bold.ttf) format('truetype');font-weight:700;font-display:swap}
+    @font-face{font-family:Poppins;src:url(fonts/Poppins-ExtraBold.woff2) format('woff2'),url(fonts/Poppins-ExtraBold.ttf) format('truetype');font-weight:800;font-display:swap}
+
+    /* ===== VARIÁVEIS E BASE (ARQUITETURA ATLAS ADAPTADA PARA DECORADORAS) ===== */
+    :root {
+      font-family: Poppins, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #261F22;
+      background: #FFF9F6;
+      font-synthesis: none;
+      --red: #D82E67;
+      --red-dark: #A61C4B;
+      --red-hover: #BF2257;
+      --gold: #D99A37;
+      --ink: #261F22;
+      --paper: #FFF9F6;
+      --line: #EAD8DF;
+      --muted: #66585E;
+      --green: #1F7A44;
+      --top: 48px;
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--top) + 20px);
+    }
+    body { margin: 0; overflow-x: hidden; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; cursor: pointer; }
+    a { color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h2 {
+      font-size: clamp(23px, 5.6vw, 35px);
+      line-height: 1.24;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+      color: var(--ink);
+    }
+    h3 {
+      font-size: 17px;
+      line-height: 1.38;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .reading {
+      width: calc(100% - 34px);
+      max-width: 740px;
+      margin-inline: auto;
+    }
+    .section {
+      padding-block: 62px;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 18px;
+    }
+    .intro {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      font-size: 14.5px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 10.5px;
+      line-height: 1.5;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: #FFEBF2;
+      border: 1px solid #F7C2D4;
+      padding: 6px 14px;
+      border-radius: 30px;
+      margin-bottom: 14px;
+    }
+
+    /* ===== BARRA DE URGÊNCIA FIXA NO TOPO ===== */
+    .urgency {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      min-height: var(--top);
+      height: var(--top);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #B81F52 0%, #D82E67 50%, #B81F52 100%);
+      color: #fff;
+      padding: 8px 14px;
+      box-shadow: 0 2px 12px rgba(38, 31, 34, 0.16);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .urgency strong {
+      font-size: clamp(11px, 3vw, 13.5px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .urgency-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #FFE599;
+    }
+
+    main { padding-top: var(--top); }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      padding-block: 26px 36px;
+      text-align: center;
+    }
+    .heroLabel {
+      background: var(--red);
+      color: #fff;
+      border: 0;
+      padding: 7px 16px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(216, 46, 103, 0.28);
+    }
+    .hero h1 {
+      font-size: clamp(23px, 5.8vw, 39px);
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+      color: var(--ink);
+      max-width: 690px;
+      margin-inline: auto;
+      animation: headlinePulse 3.6s ease-in-out infinite;
+    }
+    .hero h1 span {
+      color: var(--red);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 5px;
+    }
+    .heroLead {
+      font-size: clamp(15px, 3.8vw, 18px);
+      font-weight: 700;
+      color: var(--ink);
+      max-width: 620px;
+      margin: 14px auto 8px;
+      line-height: 1.45;
+    }
+    .heroSubtitle {
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto 18px;
+      line-height: 1.65;
+    }
+    .heroAsset {
+      width: 100%;
+      max-width: 580px;
+      margin: 12px auto 20px;
+    }
+    .heroAsset img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 28px rgba(38, 31, 34, 0.12));
+    }
+
+    /* 4 Badges do Hero */
+    .heroPills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 540px;
+      margin: 0 auto 22px;
+      text-align: left;
+    }
+    .heroPill {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: #FFFFFF;
+      border: 1px solid #F0CEDB;
+      border-radius: 12px;
+      padding: 11px 13px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--ink);
+      box-shadow: 0 4px 12px rgba(216, 46, 103, 0.05);
+    }
+    .heroPill span.emoji {
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    /* ===== BOTÃO CTA PADRÃO ===== */
+    .cta {
+      border: 0;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 18px;
+      background: linear-gradient(135deg, #D82E67 0%, #E83E78 100%);
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: 100%;
+      max-width: 520px;
+      min-height: 58px;
+      margin-inline: auto;
+      box-shadow: 0 5px #961843, 0 12px 26px rgba(216, 46, 103, 0.28);
+      transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+      animation: ctaPulse 2.8s ease-in-out infinite;
+    }
+    .cta svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .cta:hover {
+      filter: brightness(1.06);
+      transform: translateY(-2px);
+    }
+    .cta:hover svg {
+      transform: translateX(4px);
+    }
+    .cta:active {
+      transform: translateY(2px);
+    }
+    .micro {
+      font-size: 11.5px;
+      line-height: 1.65;
+      margin: 14px auto 0;
+      max-width: 530px;
+      color: var(--muted);
+    }
+
+    @keyframes headlinePulse { 50% { transform: scale(1.01); } }
+    @keyframes ctaPulse { 50% { transform: scale(1.022); } }
+
+    /* ===== SEÇÃO 2: CHEGA DE IMPROVISAR ===== */
+    .improvisarSection {
+      background: linear-gradient(to bottom, #FFF9F6 0%, #FFF0F5 55px, #FFF0F5 calc(100% - 55px), #FFF9F6 100%);
+      border-block: 1px solid var(--line);
+    }
+    .questionBox {
+      background: #FFFFFF;
+      border: 1.5px solid #F2C4D5;
+      border-left: 5px solid var(--red);
+      border-radius: 16px;
+      padding: 20px 22px;
+      text-align: left;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 24px rgba(38, 31, 34, 0.04);
+    }
+    .questionBox p {
+      font-size: 14.5px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .questionBox p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+    .checkListCards {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      max-width: 620px;
+      margin: 0 auto 24px;
+      text-align: left;
+    }
+    .checkCard {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 15px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      box-shadow: 0 3px 10px rgba(38, 31, 34, 0.03);
+    }
+    .checkCard:first-child {
+      border-color: var(--gold);
+      background: #FFFDF7;
+      box-shadow: inset 4px 0 0 var(--red), 0 6px 18px rgba(38, 31, 34, 0.05);
+    }
+    .checkIcon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #E8F8EE;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .highlightCallout {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--red);
+      margin: 22px auto 24px;
+      max-width: 560px;
+    }
+
+    /* ===== SEÇÃO 3: VEJA COMO OS MAPAS PODEM FACILITAR SUAS MONTAGENS ===== */
+    .facilitarGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      text-align: left;
+      margin-top: 26px;
+    }
+    .audienceCard {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      text-align: left;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #FFFFFF;
+      padding: 22px 18px;
+      box-shadow: 0 6px 20px rgba(38, 31, 34, 0.03);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .audienceCard:hover {
+      transform: translateY(-2px);
+      border-color: #E5B0C3;
+    }
+    .audienceCard.featured {
+      border-color: var(--gold);
+      box-shadow: inset 4px 0 0 var(--red), 0 8px 28px rgba(38, 31, 34, 0.06);
+      background: #FFF8FA;
+    }
+    .iconBadge {
+      width: 56px;
+      height: 56px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #FFEBF2 0%, #FFF5E4 100%);
+      border: 1px solid #F3C8D8;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .audienceCard h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 5px;
+      color: var(--ink);
+    }
+    .audienceCard p {
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* ===== SEÇÃO 4: CARROSSEL DE DEMONSTRAÇÃO + 50 FORMATOS ===== */
+    .demo {
+      max-width: 1360px;
+      margin: auto;
+      background: linear-gradient(to bottom, #FFF9F6 0, #FCEEF3 55px, #FCEEF3 calc(100% - 55px), #FFF9F6);
+      overflow: hidden;
+    }
+    .demo h2 {
+      padding-inline: 18px;
+      font-size: clamp(22px, 5.4vw, 33px);
+      margin-bottom: 12px;
+    }
+    .carouselRow {
+      overflow: hidden;
+      width: 100%;
+      touch-action: pan-y;
+      margin-top: 14px;
+    }
+    .track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      animation: marquee var(--duration, 24s) linear infinite;
+    }
+    .group {
+      display: flex;
+      gap: 14px;
+      padding-right: 14px;
+      flex-shrink: 0;
+    }
+    .pageAsset {
+      width: clamp(245px, 74vw, 315px);
+      aspect-ratio: 660 / 934;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: #fff;
+      border: 1.5px solid #E8D3DC;
+      box-shadow: 0 8px 24px rgba(38, 31, 34, 0.08);
+      overflow: hidden;
+    }
+    .pageAsset img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .reverse .track {
+      animation-direction: reverse;
+    }
+    .held .track, .carouselRow:focus-visible .track {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateZ(0); }
+      to { transform: translate3d(-50%, 0, 0); }
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .carouselRow:hover .track { animation-play-state: paused; }
+    }
+
+    /* Grid dos 10 estilos de Arcos Desconstruídos */
+    .formatsBox {
+      margin-top: 38px;
+      background: #FFFFFF;
+      border: 1.5px solid #F0CEDB;
+      border-radius: 22px;
+      padding: 28px 20px;
+      box-shadow: 0 12px 32px rgba(216, 46, 103, 0.06);
+    }
+    .formatsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 22px 0 24px;
+      text-align: left;
+    }
+    .formatPill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFF7FA;
+      border: 1px solid #F5D2E0;
+      border-radius: 12px;
+      padding: 12px 15px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* ===== SEÇÃO 5: O QUE VOCÊ ENCONTRA EM CADA MAPA (BENEFIT CARDS NUMERADOS 01-06) ===== */
+    .benefitCards {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+      margin-top: 26px;
+    }
+    .benefitCards article {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      border: 1px solid var(--line);
+      padding: 22px 18px;
+      background: #FFFFFF;
+      border-radius: 8px 22px 22px 8px;
+      width: 97%;
+      box-shadow: 0 6px 20px rgba(38, 31, 34, 0.03);
+    }
+    .benefitCards article:nth-child(2n) {
+      margin-left: auto;
+      background: #FFF5F8;
+      border-color: #F0C4D4;
+      border-radius: 22px 8px 8px 22px;
+    }
+    .benefitVisual {
+      position: relative;
+      flex-shrink: 0;
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #D82E67 0%, #A61C4B 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(216, 46, 103, 0.25);
+    }
+    .benefitVisual span.num {
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: #FFE599;
+      line-height: 1;
+    }
+    .benefitVisual span.ico {
+      font-size: 24px;
+      line-height: 1.1;
+      margin-top: 3px;
+    }
+    .benefitCards h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .benefitCards p {
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* ===== SEÇÃO 6: TUDO O QUE VOCÊ VAI RECEBER (RESUMO DO MATERIAL) ===== */
+    .summaryBox {
+      background: #FFFFFF;
+      border: 2px solid #F0CEDB;
+      border-radius: 24px;
+      padding: 28px 20px;
+      box-shadow: 0 12px 35px rgba(38, 31, 34, 0.05);
+    }
+    .summaryGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 11px;
+      text-align: left;
+      margin-top: 22px;
+    }
+    .summaryItem {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
+      border-radius: 12px;
+      background: #FFF9FB;
+      border: 1px solid #F3DCE5;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ===== SEÇÃO 7: 6 BÔNUS EXCLUSIVOS ===== */
+    .bonuses {
+      padding-top: 40px;
+    }
+    .bonusCards {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      margin-top: 30px;
+    }
+    .bonusCards article {
+      position: relative;
+      background: #FFFFFF;
+      border: 1.5px solid #E8C7D4;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 24px 20px;
+      box-shadow: 0 10px 28px rgba(38, 31, 34, 0.05);
+      text-align: left;
+    }
+    .bonusHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .bonusNumber {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      background: var(--ink);
+      color: #FFE599;
+      padding: 7px 14px;
+      border-radius: 8px;
+    }
+    .bonusIncludedBadge {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #8C5811;
+      background: #FFF3DC;
+      border: 1px solid #E5B968;
+      padding: 5px 12px;
+      border-radius: 30px;
+    }
+    .bonusAsset {
+      width: 100%;
+      margin: 0 auto 20px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .bonusAsset img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .bonusCopy h3 {
+      font-size: clamp(19px, 4.5vw, 24px);
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+    .bonusCopy p {
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+    .bonusBullets {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .bonusBullets li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      background: #FFF7FA;
+      padding: 9px 13px;
+      border-radius: 9px;
+      border: 1px solid #F4D8E2;
+    }
+    .bonusPrice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+    .bonusPrice span.planTag {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    .bonusPrice strong {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--green);
+      background: #E8F8EE;
+      padding: 5px 14px;
+      border-radius: 30px;
+    }
+
+    /* Painel Somatório de Valor (Value Panel) */
+    .valuePanel {
+      text-align: center;
+      background: linear-gradient(150deg, #FFF4DF, #FFFDF9);
+      color: var(--ink);
+      padding: 32px 22px;
+      border: 2px solid var(--gold);
+      border-radius: 22px;
+      box-shadow: 0 14px 36px rgba(217, 154, 55, 0.14);
+      margin-top: 36px;
+    }
+    .valuePanel h3 {
+      font-size: clamp(20px, 4.8vw, 26px);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .valuePanel ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .valuePanel li {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(217, 154, 55, 0.3);
+      padding: 12px 0;
+    }
+    .valuePanel li strong {
+      flex-shrink: 0;
+      font-size: 13px;
+      color: var(--green);
+    }
+    .freeValue {
+      margin: 18px auto 0;
+      padding: 14px 16px;
+      max-width: 440px;
+      background: var(--red);
+      color: #fff;
+      font-size: clamp(16px, 4.2vw, 21px);
+      font-weight: 800;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(216, 46, 103, 0.25);
+    }
+
+    /* ===== SEÇÃO 8: PLANOS E PREÇOS ===== */
+    .plans {
+      background: linear-gradient(to bottom, #FFF9F6 0, #F9E5EE 65px, #F9E5EE calc(100% - 65px), #FFF9F6);
+      padding-top: 72px;
+    }
+    .plans h2 em {
+      font-style: normal;
+      color: var(--red);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+    }
+    .offerNotice {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      text-transform: uppercase;
+    }
+    .tileTimer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin: 18px auto 36px;
+      font-variant-numeric: tabular-nums;
+    }
+    .digit {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 50px;
+      font-size: 26px;
+      font-weight: 800;
+      border-radius: 7px;
+      color: #fff;
+      background: linear-gradient(#D82E67 49%, #B52052 50%);
+      box-shadow: 0 3px #821439;
+    }
+    .colon {
+      color: var(--red);
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .planGrid {
+      max-width: 1040px;
+      width: calc(100% - 34px);
+      margin: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+    .plan {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      border: 1.5px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 22px;
+      background: #FFFFFF;
+      text-align: center;
+    }
+    .plan h3 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .planSubtitle {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .anchorPrice {
+      font-size: 14px;
+      color: #8E7F85;
+      margin-top: 16px;
+      display: block;
+    }
+    .price {
+      font-size: clamp(38px, 9vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      margin: 6px 0 4px;
+      color: var(--ink);
+    }
+    .installments {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .planListTitle {
+      text-align: left;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      margin: 10px 0 8px;
+    }
+    .featureList {
+      list-style: none;
+      text-align: left;
+      margin: 8px 0 18px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .featureList li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .featureList li.excludedItem {
+      color: #9A8B91;
+      text-decoration: line-through;
+    }
+    .planAction {
+      margin-top: auto;
+      padding-top: 16px;
+    }
+    .basic .cta {
+      background: #5E5257;
+      box-shadow: 0 4px #3D3438;
+      animation: none;
+      font-size: 13px;
+    }
+    .basic .cta:hover {
+      background: #4A3F44;
+    }
+    .complete {
+      border: 2.5px solid var(--red);
+      padding-top: 44px;
+      box-shadow: 0 18px 45px rgba(216, 46, 103, 0.14);
+      background: #FFFFFF;
+    }
+    .popular {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: linear-gradient(90deg, #D82E67, #E83E78);
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 8px 24px;
+      border-radius: 30px;
+      box-shadow: 0 6px 16px rgba(216, 46, 103, 0.3);
+    }
+    .planAsset {
+      margin: 16px 0 8px;
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .complete .price {
+      font-size: clamp(46px, 11vw, 62px);
+      color: var(--red);
+      text-shadow: 0 3px 0 #fff, 0 8px 22px rgba(216, 46, 103, 0.2);
+      animation: completePricePulse 2.8s ease-in-out infinite;
+    }
+    @keyframes completePricePulse { 50% { transform: scale(1.035); } }
+
+    .planCallout {
+      background: #FFF4DF;
+      border: 1px solid #E6B865;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #6B4209;
+      margin: 6px 0 8px;
+    }
+    .trust {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 18px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .trust span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .upgradeHint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #FFF2DC;
+      border: 1px solid #E5B968;
+      border-radius: 12px;
+      padding: 13px 12px;
+      margin-top: 18px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    /* ===== SEÇÃO 9: GARANTIA DE 30 DIAS ===== */
+    .guarantee {
+      border-block: 1px solid var(--line);
+      background: #FFFDFB;
+    }
+    .guaranteeSeal {
+      width: 168px;
+      height: auto;
+      margin: 0 auto 20px;
+    }
+    .guarantee p {
+      max-width: 580px;
+      margin: 0 auto 12px;
+      font-size: 14.5px;
+    }
+
+    /* ===== SEÇÃO 10: COMO RECEBER SEUS MAPAS ===== */
+    .stepsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 26px;
+      text-align: left;
+    }
+    .stepCard {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      box-shadow: 0 5px 16px rgba(38, 31, 34, 0.03);
+    }
+    .stepNum {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #FFEBF2;
+      border: 1.5px solid #F2B6CB;
+      color: var(--red);
+      font-size: 18px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .stepCard h3 {
+      font-size: 15.5px;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+    .stepCard p {
+      font-size: 13px;
+    }
+
+    /* ===== SEÇÃO 11: PERGUNTAS FREQUENTES (ACCORDION) ===== */
+    .faqList {
+      text-align: left;
+      border-top: 1px solid var(--line);
+      margin-top: 24px;
+    }
+    .faqList article {
+      border-bottom: 1px solid var(--line);
+    }
+    .faqList h3 button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      padding: 20px 4px;
+      background: none;
+      border: 0;
+      text-align: left;
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+    .faqList h3 span {
+      flex-shrink: 0;
+      color: var(--red);
+      font-size: 26px;
+      font-weight: 400;
+      transition: transform 0.3s;
+    }
+    .faqOpen h3 span {
+      transform: rotate(45deg);
+    }
+    .answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      visibility: hidden;
+      transition: grid-template-rows 0.3s, visibility 0.3s;
+    }
+    .faqOpen .answer {
+      grid-template-rows: 1fr;
+      visibility: visible;
+    }
+    .answer > div {
+      overflow: hidden;
+    }
+    .answer p {
+      font-size: 13.5px;
+      padding: 0 20px 20px 4px;
+      line-height: 1.7;
+    }
+
+    /* ===== SEÇÃO 12: FINAL CTA & FOOTER ===== */
+    .finalCta {
+      background: linear-gradient(to bottom, #FFF9F6, #FCE8F0 65px, #FCE8F0 calc(100% - 65px), #261F22);
+      padding-bottom: 85px;
+    }
+    .finalBalloonIcon {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid #F0CEDB;
+      display: grid;
+      place-items: center;
+      font-size: 38px;
+      margin: 0 auto 18px;
+      box-shadow: 0 8px 24px rgba(216, 46, 103, 0.12);
+    }
+    .finalCta h2 {
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    .finalCta p.intro {
+      max-width: 580px;
+      margin: 0 auto 26px;
+    }
+
+    footer {
+      background: var(--ink);
+      padding: 38px 0;
+      text-align: center;
+    }
+    footer p {
+      color: #E2D8DC;
+      font-size: 11.5px;
+      line-height: 1.8;
+    }
+    footer .footerLinks {
+      margin-top: 10px;
+      color: #B5A6AC;
+      font-size: 11.5px;
+    }
+    footer .footerLinks a {
+      text-decoration: underline;
+      margin-inline: 6px;
+    }
+
+    /* ===== MODAL DE UPGRADE (QUANDO CLICA NO PLANO BÁSICO) ===== */
+    .upgrade {
+      border: 2px solid var(--gold);
+      border-radius: 22px;
+      background: var(--paper);
+      padding: 34px 22px 26px;
+      max-width: 510px;
+      width: calc(100% - 28px);
+      max-height: calc(100dvh - 32px);
+      overflow: auto;
+      text-align: center;
+      color: var(--ink);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+    .upgrade::backdrop {
+      background: rgba(23, 15, 19, 0.78);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      background: #F5E6EC;
+      border-radius: 50%;
+      font-size: 24px;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .upgrade h2 {
+      font-size: 23px;
+      margin: 6px 0 12px;
+    }
+    .upgrade .price {
+      font-size: 40px;
+      color: var(--red);
+      margin: 12px 0;
+    }
+    .upgrade .secondary {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      margin: 14px auto 0;
+      padding: 13px 12px;
+      border: 1.5px solid #C9B5BE;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* ===== POPUP DE DESCONTO 10% (SAÍDA / SCROLL PLANOS) ===== */
+    .promo-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      background: rgba(22, 14, 18, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 280ms ease, visibility 280ms ease;
+    }
+    .promo-overlay.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .promo-card {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      background: linear-gradient(165deg, #281D22 0%, #191215 100%);
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      padding: 32px 24px 26px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      color: #fff;
+      text-align: center;
+    }
+    .promo-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 0;
+      color: #ddd;
+      font-size: 20px;
+    }
+    .promo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #d99a37 0%, #f3ba5d 100%);
+      color: #1a140b;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .promo-card h3 {
+      margin: 0 0 10px;
+      font-size: 23px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .promo-card h3 span {
+      color: #FFE599;
+      text-decoration: underline;
+    }
+    .promo-card p {
+      margin: 0 0 18px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .promo-coupon-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px dashed var(--gold);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .promo-coupon-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FFE599;
+      font-weight: 700;
+      display: block;
+      text-align: left;
+    }
+    .promo-coupon-code {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #fff;
+      font-family: monospace;
+    }
+    .promo-coupon-copy-btn {
+      background: rgba(217, 154, 55, 0.25);
+      border: 1px solid var(--gold);
+      color: #FFE599;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .promo-cta-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #D82E67 0%, #E83E78 100%);
+      color: #fff;
+      border: none;
+      padding: 15px 18px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(216, 46, 103, 0.45);
+    }
+    .coupon-toast {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120px);
+      z-index: 9999999;
+      background: #261F22;
+      border: 1.5px solid var(--gold);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 100px;
+      font-size: 12.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s, opacity 0.25s;
+    }
+    .coupon-toast.is-visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ===== RESPONSIVIDADE DESKTOP ===== */
+    @media (min-width: 700px) {
+      .section { padding-block: 82px; }
+      .facilitarGrid { grid-template-columns: repeat(2, 1fr); }
+      .formatsGrid { grid-template-columns: repeat(2, 1fr); }
+      .summaryGrid { grid-template-columns: repeat(2, 1fr); }
+      .bonusBullets { grid-template-columns: repeat(2, 1fr); }
+      .stepsGrid { grid-template-columns: repeat(2, 1fr); }
+      .planGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px;
+        align-items: stretch;
+      }
+      .plan { padding: 34px 26px; }
+      .complete { padding-top: 52px; }
+      .digit { width: 43px; height: 55px; font-size: 30px; }
+    }
+    @media (max-width: 420px) {
+      .heroPills { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE URGÊNCIA FIXA NO TOPO -->
+  <header class="urgency" data-section="urgency">
+    <strong id="urgencyText">OFERTA ESPECIAL APENAS HOJE</strong>
+    <span class="urgency-pill">🎈 +6 BÔNUS INCLUSOS</span>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         1. HERO SECTION
+         ========================================================= -->
+    <section class="hero reading" data-section="hero">
+      <span class="eyebrow heroLabel">🎈 50 MAPAS DE ARCOS DESCONSTRUÍDOS</span>
+      <h1>
+        <span>50 Mapas de Montagem</span> de Arcos Desconstruídos de Balões para Decoradoras
+      </h1>
+      <p class="heroLead">
+        Aprenda a planejar arcos desconstruídos com diferentes formatos, volumes e combinações de balões!
+      </p>
+      <p class="heroSubtitle">
+        Tenha referências visuais para consultar quantidades, tamanhos, distribuição dos balões e a sequência de montagem de cada estilo.
+      </p>
+
+      <div class="heroAsset">
+        <img src="./assets/hero-produto.webp" alt="50 Mapas de Montagem de Arcos Desconstruídos de Balões para Decoradoras" width="900" height="700" fetchpriority="high">
+      </div>
+
+      <div class="heroPills">
+        <div class="heroPill"><span class="emoji">🎈</span> <span>50 formatos de arcos desconstruídos</span></div>
+        <div class="heroPill"><span class="emoji">📐</span> <span>Quantidades e tamanhos em polegadas</span></div>
+        <div class="heroPill"><span class="emoji">🎨</span> <span>Distribuição de cores e volumes</span></div>
+        <div class="heroPill"><span class="emoji">🛠️</span> <span>Montagem visual passo a passo</span></div>
+      </div>
+
+      <a href="#planos" class="cta">
+        QUERO OS 50 MAPAS
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <p class="micro">*Material digital em PDF para consultar pelo celular, tablet ou computador.</p>
+    </section>
+
+    <!-- =========================================================
+         2. CHEGA DE IMPROVISAR NA HORA DE MONTAR SEUS ARCOS!
+         ========================================================= -->
+    <section class="section improvisarSection" data-section="problem-solution">
+      <div class="reading">
+        <span class="eyebrow">🎈 CHEGA DE IMPROVISAR NA HORA DE MONTAR SEUS ARCOS!</span>
+        <h2>Tenha uma referência visual para cada montagem</h2>
+
+        <div class="questionBox">
+          <p><strong>Você já escolheu um modelo de arco desconstruído, mas ficou em dúvida sobre quantos balões utilizar ou como distribuir os tamanhos?</strong></p>
+          <p>Com os <strong>50 Mapas de Montagem de Arcos Desconstruídos</strong>, a proposta é facilitar o planejamento de diferentes modelos de decoração.</p>
+        </div>
+
+        <div class="checkListCards">
+          <div class="checkCard">
+            <span class="checkIcon">✅</span>
+            <span>Escolha o formato do arco que deseja montar.</span>
+          </div>
+          <div class="checkCard">
+            <span class="checkIcon">✅</span>
+            <span>Confira as quantidades aproximadas de balões.</span>
+          </div>
+          <div class="checkCard">
+            <span class="checkIcon">✅</span>
+            <span>Consulte os tamanhos em polegadas.</span>
+          </div>
+          <div class="checkCard">
+            <span class="checkIcon">✅</span>
+            <span>Visualize como distribuir os volumes.</span>
+          </div>
+          <div class="checkCard">
+            <span class="checkIcon">✅</span>
+            <span>Acompanhe a sequência de montagem.</span>
+          </div>
+        </div>
+
+        <p class="highlightCallout">Mais organização para transformar suas referências em decorações!</p>
+
+        <a href="#planos" class="cta">
+          QUERO OS 50 MAPAS
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. VEJA COMO OS MAPAS PODEM FACILITAR SUAS MONTAGENS
+         ========================================================= -->
+    <section class="section reading" data-section="features">
+      <span class="eyebrow">✨ ORGANIZAÇÃO E PRATICIDADE</span>
+      <h2>Veja como os mapas podem facilitar suas montagens</h2>
+
+      <div class="facilitarGrid">
+        <article class="audienceCard featured">
+          <div class="iconBadge">🎈</div>
+          <div>
+            <h3>Praticidade</h3>
+            <p>Escolha entre 50 formatos de arcos desconstruídos e consulte as informações necessárias antes de começar.</p>
+          </div>
+        </article>
+
+        <article class="audienceCard">
+          <div class="iconBadge">📐</div>
+          <div>
+            <h3>Quantidades e tamanhos</h3>
+            <p>Confira estimativas de quantidades e os tamanhos dos balões utilizados em cada projeto, com destaque para os balões de 5", 9", 12" e 18".</p>
+          </div>
+        </article>
+
+        <article class="audienceCard">
+          <div class="iconBadge">🎨</div>
+          <div>
+            <h3>Distribuição orgânica</h3>
+            <p>Visualize como combinar balões pequenos, médios e grandes para criar diferentes volumes e composições assimétricas.</p>
+          </div>
+        </article>
+
+        <article class="audienceCard">
+          <div class="iconBadge">🛠️</div>
+          <div>
+            <h3>Passo a passo visual</h3>
+            <p>Acompanhe as principais etapas da montagem, desde a preparação dos materiais até os ajustes finais.</p>
+          </div>
+        </article>
+
+        <article class="audienceCard">
+          <div class="iconBadge">📋</div>
+          <div>
+            <h3>Mais organização</h3>
+            <p>Tenha as informações reunidas em um único material para consultar durante seus pedidos.</p>
+          </div>
+        </article>
+
+        <article class="audienceCard">
+          <div class="iconBadge">✨</div>
+          <div>
+            <h3>Acabamento</h3>
+            <p>Aprenda a identificar pontos de preenchimento, transições e detalhes que valorizam o resultado final.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. CARROSSEL VISUAL + 50 FORMATOS DE ARCOS DESCONSTRUÍDOS
+         ========================================================= -->
+    <section class="section demo" data-section="carousel">
+      <div class="reading">
+        <span class="eyebrow">😍 50 FORMATOS DE ARCOS DESCONSTRUÍDOS PARA VOCÊ EXPLORAR!</span>
+        <h2>Não são apenas mudanças de cores. São diferentes possibilidades de montagem!</h2>
+        <p class="intro">Conheça modelos com estruturas, curvas, volumes e distribuições variadas. Veja alguns exemplos dos mapas por dentro:</p>
+      </div>
+
+      <!-- Fileira 1 do Carrossel -->
+      <div class="carouselRow" tabindex="0" aria-label="Exemplos de Mapas de Arcos Desconstruídos - Fileira 1">
+        <div class="track" style="--duration: 24s;">
+          <div class="group">
+            <div class="pageAsset"><img src="./assets/carrossel/01.webp" alt="Mapa 01 - Arco Lateral Desconstruído" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/02.webp" alt="Mapa 02 - Arco Orgânico Completo" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/03.webp" alt="Mapa 03 - Arco em Meia-Lua" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/04.webp" alt="Mapa 04 - Arco em Formato de L" loading="lazy" width="660" height="934"></div>
+          </div>
+          <div class="group" aria-hidden="true">
+            <div class="pageAsset"><img src="./assets/carrossel/01.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/02.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/03.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/04.webp" alt="" loading="lazy" width="660" height="934"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fileira 2 do Carrossel (Sentido Inverso) -->
+      <div class="carouselRow reverse" tabindex="0" aria-label="Exemplos de Mapas de Arcos Desconstruídos - Fileira 2">
+        <div class="track" style="--duration: 26s;">
+          <div class="group">
+            <div class="pageAsset"><img src="./assets/carrossel/05.webp" alt="Mapa 05 - Arco em Cascata" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/06.webp" alt="Mapa 06 - Arco para Painel Redondo" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/07.webp" alt="Mapa 07 - Arco para Entrada de Festa" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/08.webp" alt="Mapa 08 - Arco Assimétrico Suspenso" loading="lazy" width="660" height="934"></div>
+          </div>
+          <div class="group" aria-hidden="true">
+            <div class="pageAsset"><img src="./assets/carrossel/05.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/06.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/07.webp" alt="" loading="lazy" width="660" height="934"></div>
+            <div class="pageAsset"><img src="./assets/carrossel/08.webp" alt="" loading="lazy" width="660" height="934"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista dos 10 Formatos da Copy -->
+      <div class="reading">
+        <div class="formatsBox">
+          <h3>Estilos e estruturas que você vai explorar nos 50 Mapas:</h3>
+          <div class="formatsGrid">
+            <div class="formatPill">🎈 Arcos laterais desconstruídos</div>
+            <div class="formatPill">🎈 Arcos orgânicos completos</div>
+            <div class="formatPill">🎈 Arcos em meia-lua</div>
+            <div class="formatPill">🎈 Arcos em formato de L</div>
+            <div class="formatPill">🎈 Arcos em cascata</div>
+            <div class="formatPill">🎈 Arcos assimétricos</div>
+            <div class="formatPill">🎈 Arcos para painéis redondos</div>
+            <div class="formatPill">🎈 Arcos para entradas de festas</div>
+            <div class="formatPill">🎈 Arcos com volumes suspensos</div>
+            <div class="formatPill">🎈 Composições orgânicas modernas</div>
+          </div>
+          <p class="highlightCallout" style="margin-top: 6px;">50 referências de montagem para explorar diferentes estilos de decoração!</p>
+          <a href="#planos" class="cta">
+            QUERO CONHECER OS MAPAS
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. O QUE VOCÊ ENCONTRA EM CADA MAPA? (6 ETAPAS NUMERADAS)
+         ========================================================= -->
+    <section class="section reading" data-section="map-anatomy">
+      <span class="eyebrow">📐 ESTRUTURA COMPLETA POR PROJETO</span>
+      <h2>O que você encontra em cada mapa?</h2>
+      <p class="intro">Cada modelo foi pensado para reunir informações úteis para o planejamento e a execução da montagem.</p>
+
+      <div class="benefitCards">
+        <article>
+          <div class="benefitVisual">
+            <span class="num">01</span>
+            <span class="ico">🎈</span>
+          </div>
+          <div>
+            <h3>1. Imagem do arco finalizado</h3>
+            <p>Visualize o formato completo e entenda a proposta da decoração.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="benefitVisual">
+            <span class="num">02</span>
+            <span class="ico">🔢</span>
+          </div>
+          <div>
+            <h3>2. Quantidade de balões</h3>
+            <p>Consulte uma estimativa de quantos balões separar para o projeto.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="benefitVisual">
+            <span class="num">03</span>
+            <span class="ico">📐</span>
+          </div>
+          <div>
+            <h3>3. Tamanhos em polegadas</h3>
+            <p>Veja os tamanhos utilizados na composição, incluindo balões de 5", 9", 12" e 18", conforme o modelo.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="benefitVisual">
+            <span class="num">04</span>
+            <span class="ico">🎨</span>
+          </div>
+          <div>
+            <h3>4. Distribuição dos balões</h3>
+            <p>Entenda onde posicionar os diferentes tamanhos para construir uma composição orgânica.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="benefitVisual">
+            <span class="num">05</span>
+            <span class="ico">🧰</span>
+          </div>
+          <div>
+            <h3>5. Materiais necessários</h3>
+            <p>Consulte os principais materiais, acessórios e suportes previstos para a montagem.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="benefitVisual">
+            <span class="num">06</span>
+            <span class="ico">🛠️</span>
+          </div>
+          <div>
+            <h3>6. Sequência de montagem</h3>
+            <p>Acompanhe as etapas visuais, desde a preparação da estrutura até o acabamento.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="highlightCallout">Tudo organizado para facilitar sua consulta durante a decoração!</p>
+    </section>
+
+    <!-- =========================================================
+         6. TUDO O QUE VOCÊ VAI RECEBER
+         ========================================================= -->
+    <section class="section reading" data-section="summary">
+      <div class="summaryBox">
+        <span class="eyebrow">🎁 TUDO O QUE VOCÊ VAI RECEBER</span>
+        <h2>50 Mapas de Montagem de Arcos Desconstruídos de Balões</h2>
+        <p class="intro">Uma coleção digital com diferentes projetos para quem deseja explorar o estilo de decoração com balões desconstruídos.</p>
+
+        <div class="summaryGrid">
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>50 formatos de arcos desconstruídos.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Referências visuais de cada montagem.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Quantidades aproximadas de balões.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Tamanhos em polegadas.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Distribuição de cores e volumes.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Orientações de montagem.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Material digital em PDF.</span></div>
+          <div class="summaryItem"><span class="checkIcon">✅</span> <span>Arquivos para consultar ou imprimir.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. 6 BÔNUS EXCLUSIVOS
+         ========================================================= -->
+    <section class="section reading bonuses" data-section="bonuses">
+      <span class="eyebrow">🎁 6 BÔNUS EXCLUSIVOS</span>
+      <h2>No Plano Completo, você também recebe seis materiais complementares!</h2>
+
+      <div class="bonusCards">
+        <!-- BÔNUS #1 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #1</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-01.webp" alt="Bônus 1 - 20 Mapas de Arcos Desconstruídos Compactos" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>20 Mapas de Arcos Desconstruídos Compactos</h3>
+            <p>Modelos pensados para espaços menores, festas em casa e decorações compactas.</p>
+            <p>Consulte diferentes formatos orgânicos com orientações de proporção, distribuição e montagem.</p>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- BÔNUS #2 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #2</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-02.webp" alt="Bônus 2 - 15 Mapas de Arcos Desconstruídos para Entradas" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>15 Mapas de Arcos Desconstruídos para Entradas</h3>
+            <p>Referências de arcos para entradas de festas, recepções e espaços de passagem.</p>
+            <p>Explore diferentes estruturas e distribuições de volume para criar composições de entrada.</p>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- BÔNUS #3 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #3</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-03.webp" alt="Bônus 3 - 20 Técnicas Visuais de Preenchimento e Acabamento" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>20 Técnicas Visuais de Preenchimento e Acabamento</h3>
+            <p>Aprenda a observar os detalhes que fazem diferença em uma montagem desconstruída.</p>
+            <ul class="bonusBullets">
+              <li>🎈 Preenchimento de espaços.</li>
+              <li>🎈 Distribuição de mini balões.</li>
+              <li>🎈 Transições entre tamanhos.</li>
+              <li>🎈 Equilíbrio dos volumes.</li>
+              <li>🎈 Ajustes finais da composição.</li>
+            </ul>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- BÔNUS #4 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #4</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-04.webp" alt="Bônus 4 - 30 Combinações de Cores para Arcos Desconstruídos" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>30 Combinações de Cores para Arcos Desconstruídos</h3>
+            <p>Explore referências visuais para distribuir duas, três ou quatro cores em diferentes composições.</p>
+            <p>Descubra possibilidades de combinações para festas infantis, aniversários, eventos e decorações modernas.</p>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- BÔNUS #5 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #5</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-05.webp" alt="Bônus 5 - Ficha de Planejamento da Montagem" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>Ficha de Planejamento da Montagem</h3>
+            <p>Organize as informações de cada pedido antes de começar a decoração.</p>
+            <ul class="bonusBullets">
+              <li>📋 Nome do cliente.</li>
+              <li>🎨 Paleta de cores.</li>
+              <li>🎈 Quantidades de balões.</li>
+              <li>📐 Tamanhos em polegadas.</li>
+              <li>🛠️ Materiais necessários.</li>
+              <li>📅 Data e local do evento.</li>
+            </ul>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- BÔNUS #6 -->
+        <article>
+          <div class="bonusHeader">
+            <span class="bonusNumber">🎁 BÔNUS #6</span>
+            <span class="bonusIncludedBadge">INCLUSO NO PLANO COMPLETO</span>
+          </div>
+          <div class="bonusAsset">
+            <img src="./assets/bonus/bonus-06.webp" alt="Bônus 6 - Guia da Primeira Montagem Desconstruída" loading="lazy" width="640" height="440">
+          </div>
+          <div class="bonusCopy">
+            <h3>Guia da Primeira Montagem Desconstruída</h3>
+            <p>Um material introdutório para quem deseja entender melhor a montagem de arcos orgânicos.</p>
+            <p>Conheça os principais tamanhos de balões, tipos de agrupamentos, distribuição de volumes e cuidados de acabamento.</p>
+            <div class="bonusPrice">
+              <span class="planTag">INCLUSO NO PLANO COMPLETO</span>
+              <strong>🎁 GRÁTIS</strong>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Painel Resumo dos Bônus -->
+      <div class="valuePanel">
+        <h3>Resumo dos 6 Bônus Exclusivos do Plano Completo:</h3>
+        <p>Levando o Plano Completo hoje, todos os 6 materiais complementares entram sem custo adicional:</p>
+        <ul>
+          <li><span>🎁 #1: 20 Mapas de Arcos Desconstruídos Compactos</span> <strong>GRÁTIS</strong></li>
+          <li><span>🎁 #2: 15 Mapas de Arcos Desconstruídos para Entradas</span> <strong>GRÁTIS</strong></li>
+          <li><span>🎁 #3: 20 Técnicas Visuais de Preenchimento e Acabamento</span> <strong>GRÁTIS</strong></li>
+          <li><span>🎁 #4: 30 Combinações de Cores para Arcos Desconstruídos</span> <strong>GRÁTIS</strong></li>
+          <li><span>🎁 #5: Ficha de Planejamento da Montagem</span> <strong>GRÁTIS</strong></li>
+          <li><span>🎁 #6: Guia da Primeira Montagem Desconstruída</span> <strong>GRÁTIS</strong></li>
+        </ul>
+        <div class="freeValue">TODOS OS 6 BÔNUS SAEM POR R$ 0,00 (GRÁTIS)</div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. ESCOLHA O PLANO IDEAL PARA SUAS MONTAGENS
+         ========================================================= -->
+    <section class="section plans" id="planos" data-section="plans">
+      <div class="reading">
+        <span class="eyebrow">💖 ESCOLHA O PLANO IDEAL PARA SUAS MONTAGENS</span>
+        <h2>Escolha o <em>PLANO IDEAL</em> para suas montagens</h2>
+        <p class="offerNotice">CONDIÇÃO ESPECIAL COM ACESSO IMEDIATO</p>
+        <div class="tileTimer" id="offerTimer" aria-label="Tempo restante da oferta">
+          <span class="digit">0</span><span class="digit">0</span><span class="colon">:</span>
+          <span class="digit">2</span><span class="digit">9</span><span class="colon">:</span>
+          <span class="digit">5</span><span class="digit">9</span>
+        </div>
+      </div>
+
+      <div class="planGrid">
+        <!-- PLANO BÁSICO -->
+        <article class="plan basic" data-section="basic">
+          <span class="eyebrow" style="margin-inline:auto;">🎈 PLANO BÁSICO</span>
+          <h3>PLANO BÁSICO</h3>
+          <p class="planSubtitle">50 Mapas de Montagem de Arcos Desconstruídos</p>
+
+          <del class="anchorPrice">De R$ 39,90</del>
+          <div class="price">R$ 17,90</div>
+          <p class="installments"><em>Ou 5x de R$ 3,99 no cartão.</em></p>
+
+          <div class="planListTitle">O que está incluído:</div>
+          <ul class="featureList">
+            <li><span>✅</span> <span>50 mapas de arcos desconstruídos.</span></li>
+            <li><span>✅</span> <span>Referência visual de cada modelo.</span></li>
+            <li><span>✅</span> <span>Quantidades e tamanhos de balões.</span></li>
+            <li><span>✅</span> <span>Distribuição dos volumes.</span></li>
+            <li><span>✅</span> <span>Orientações de montagem.</span></li>
+            <li><span>✅</span> <span>Arquivos digitais em PDF.</span></li>
+            <li class="excludedItem"><span>❌</span> <span>Não inclui os seis bônus exclusivos.</span></li>
+          </ul>
+
+          <div class="planAction">
+            <button type="button" class="cta" id="btnBasicPlan">
+              QUERO O PLANO BÁSICO
+            </button>
+            <div class="trust">
+              <span>🔒 Pagamento Seguro</span>
+              <span>📱 PDF Digital</span>
+              <span>🛡️ Garantia 30 Dias</span>
+            </div>
+            <a class="upgradeHint" href="#plano-completo">
+              <span>👇 Veja o Plano Completo com os 6 Bônus Exclusivos</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- PLANO COMPLETO -->
+        <article class="plan complete" id="plano-completo" data-section="complete">
+          <span class="popular">⭐ MAIS ESCOLHIDO</span>
+          <h3>PLANO COMPLETO</h3>
+          <p class="planSubtitle">50 Mapas de Arcos Desconstruídos + 6 Bônus Exclusivos</p>
+
+          <div class="planAsset">
+            <img src="./assets/planos/plano-completo.webp" alt="Plano Completo - 50 Mapas de Arcos Desconstruídos + 6 Bônus Exclusivos" loading="lazy" width="860" height="620">
+          </div>
+
+          <del class="anchorPrice">De R$ 147,00</del>
+          <div class="price">R$ 27,90</div>
+          <p class="installments"><em>Ou 5x de R$ 6,22 no cartão.</em></p>
+
+          <div class="planListTitle">Você recebe:</div>
+          <ul class="featureList">
+            <li><span>✅</span> <span><strong>50 Mapas de Montagem de Arcos Desconstruídos.</strong></span></li>
+            <li><span>🎁</span> <span><strong>20 Mapas de Arcos Desconstruídos Compactos.</strong></span></li>
+            <li><span>🎁</span> <span><strong>15 Mapas de Arcos para Entradas.</strong></span></li>
+            <li><span>🎁</span> <span><strong>20 Técnicas de Preenchimento e Acabamento.</strong></span></li>
+            <li><span>🎁</span> <span><strong>30 Combinações de Cores.</strong></span></li>
+            <li><span>🎁</span> <span><strong>Ficha de Planejamento da Montagem.</strong></span></li>
+            <li><span>🎁</span> <span><strong>Guia da Primeira Montagem Desconstruída.</strong></span></li>
+          </ul>
+
+          <div class="planCallout">
+            Uma coleção para consultar diferentes formatos, combinações e técnicas de montagem!
+          </div>
+
+          <div class="planAction">
+            <a href="#checkout-completo" data-checkout="completo" class="cta">
+              QUERO O PLANO COMPLETO
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <div class="trust">
+              <span>🔒 Pagamento Seguro</span>
+              <span>⚡ Acesso Imediato</span>
+              <span>🛡️ Garantia 30 Dias</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. GARANTIA DE 30 DIAS
+         ========================================================= -->
+    <section class="section reading guarantee" data-section="guarantee">
+      <div class="guaranteeSeal">
+        <img src="./assets/generated/guarantee-30.webp" alt="Garantia de 30 Dias - Sua compra protegida" loading="lazy" width="168" height="168">
+      </div>
+      <span class="eyebrow">🛡️ GARANTIA DE 30 DIAS</span>
+      <h2>Sua compra protegida!</h2>
+      <p><strong>Você tem 30 dias para conhecer o material.</strong></p>
+      <p>Se não ficar satisfeita, poderá solicitar o reembolso integral dentro do prazo da garantia, conforme as condições informadas na compra.</p>
+      <div style="margin-top: 24px;">
+        <a href="#planos" class="cta">
+          QUERO CONHECER OS MAPAS
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. COMO RECEBER SEUS MAPAS
+         ========================================================= -->
+    <section class="section reading" data-section="how-to-receive">
+      <span class="eyebrow">📲 ACESSO RÁPIDO E SIMPLES</span>
+      <h2>Como receber seus mapas</h2>
+
+      <div class="stepsGrid">
+        <div class="stepCard">
+          <div class="stepNum">1</div>
+          <div>
+            <h3>1. Escolha seu plano</h3>
+            <p>Selecione o Plano Básico ou o Plano Completo.</p>
+          </div>
+        </div>
+
+        <div class="stepCard">
+          <div class="stepNum">2</div>
+          <div>
+            <h3>2. Conclua sua compra</h3>
+            <p>Finalize o pagamento pela plataforma indicada.</p>
+          </div>
+        </div>
+
+        <div class="stepCard">
+          <div class="stepNum">3</div>
+          <div>
+            <h3>3. Receba as instruções</h3>
+            <p>As informações de acesso serão enviadas ao e-mail cadastrado.</p>
+          </div>
+        </div>
+
+        <div class="stepCard">
+          <div class="stepNum">4</div>
+          <div>
+            <h3>4. Consulte seus mapas</h3>
+            <p>Acesse os arquivos digitais pelo celular, tablet ou computador.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11. PERGUNTAS FREQUENTES (FAQ)
+         ========================================================= -->
+    <section class="section reading" data-section="faq">
+      <span class="eyebrow">❓ PERGUNTAS FREQUENTES</span>
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faqList" id="faqAccordion">
+        <article class="faqOpen">
+          <h3>
+            <button type="button" aria-expanded="true">
+              O que são os Mapas de Arcos Desconstruídos?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>São materiais visuais desenvolvidos para orientar o planejamento e a montagem de diferentes formatos de arcos orgânicos com balões.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              Os 50 mapas são diferentes?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>A coleção é proposta com 50 formatos de montagem, incluindo diferentes geometrias, estruturas e distribuições de volume, e não apenas variações de cores.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              Quais tamanhos de balões são utilizados?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>Os projetos podem utilizar balões de 5", 9", 12" e 18", com predominância dos tamanhos indicados em cada mapa.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              Os mapas mostram quantos balões utilizar?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>Sim. A proposta é apresentar quantidades aproximadas por tamanho e cor, que podem variar conforme as dimensões e a execução de cada montagem.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              O material serve para iniciantes?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>Os mapas foram pensados para facilitar a compreensão visual. Entretanto, algumas estruturas podem exigir conhecimentos prévios, equipamentos específicos e cuidados adicionais de fixação.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              O material é físico ou digital?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>É um produto digital em PDF, desenvolvido para consulta pelo celular, tablet ou computador, com possibilidade de impressão.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              Qual a diferença entre o Plano Básico e o Completo?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>O Básico inclui os 50 mapas principais. O Completo acrescenta os seis materiais complementares apresentados na página.</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>
+            <button type="button" aria-expanded="false">
+              E se eu comprar e não gostar?
+              <span aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="answer">
+            <div>
+              <p>Você poderá solicitar o reembolso dentro do prazo de 30 dias, conforme as condições da garantia.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         12. SEÇÃO FINAL CTA
+         ========================================================= -->
+    <section class="section finalCta" data-section="final">
+      <div class="reading">
+        <div class="finalBalloonIcon">🎈</div>
+        <span class="eyebrow">🎈 TENHA UMA REFERÊNCIA VISUAL PARA CADA MONTAGEM!</span>
+        <h2>Explore 50 formatos de arcos desconstruídos e organize melhor suas decorações.</h2>
+        <p class="intro">Consulte os tamanhos, as quantidades aproximadas, a distribuição dos balões e as orientações de montagem em um só lugar.</p>
+        <a href="#planos" class="cta">
+          QUERO OS 50 MAPAS DE ARCOS DESCONSTRUÍDOS
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <p class="micro">*Material digital em PDF.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer data-section="footer">
+    <div class="reading">
+      <p>© 2026 | Todos os direitos reservados.</p>
+      <p class="footerLinks">
+        <a href="#planos">Política de Privacidade</a> | <a href="#planos">Termos de Uso</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       DIALOG DE UPGRADE (AO CLICAR NO PLANO BÁSICO)
+       ========================================================= -->
+  <dialog id="upgradeDialog" class="upgrade" aria-labelledby="upgrade-title">
+    <button type="button" class="close" id="closeUpgradeBtn" aria-label="Fechar oferta especial">&times;</button>
+    <span class="eyebrow">⭐ OFERTA ESPECIAL DE UPGRADE</span>
+    <h2 id="upgrade-title">Leve o Plano Completo + todos os 6 Bônus Exclusivos!</h2>
+    <p>Por apenas <strong>R$ 10,00 a mais</strong> que o Plano Básico, você destrava os <strong>50 Mapas Principais + 6 Bônus Exclusivos</strong> (Compactos, Entradas, Acabamento, 30 Combinações de Cores, Ficha de Planejamento e Guia da Primeira Montagem):</p>
+    <div class="planAsset" style="max-width:340px;margin:14px auto;">
+      <img src="./assets/planos/plano-completo.webp" alt="Pacote Completo 50 Mapas + 6 Bônus" loading="lazy">
+    </div>
+    <div class="price">R$ 27,90</div>
+    <p class="installments"><em>Ou 5x de R$ 6,22 no cartão</em></p>
+    <a href="#checkout-upgrade" data-checkout="upgrade" class="cta">
+      SIM! QUERO O PLANO COMPLETO COM 6 BÔNUS
+    </a>
+    <a href="#checkout-basico" data-checkout="basico" class="secondary">
+      Não, quero continuar somente com o Plano Básico (R$ 17,90)
+    </a>
+  </dialog>
+
+  <!-- =========================================================
+       MODAL DE CUPOM DE 10% OFF (EXIT INTENT / SCROLL PLANOS)
+       ========================================================= -->
+  <div id="promoOverlay" class="promo-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="promo-card">
+      <button id="promoClose" class="promo-close" aria-label="Fechar">&times;</button>
+      <span class="promo-badge">🎁 ESPERE! PRESENTE ESPECIAL</span>
+      <h3>Antes de sair, garanta<br><span>10% DE DESCONTO</span></h3>
+      <p>Liberamos um cupom especial para você garantir os <strong>50 Mapas de Arcos Desconstruídos</strong> com desconto agora mesmo.</p>
+
+      <div class="promo-coupon-box">
+        <div>
+          <span class="promo-coupon-label">SEU CUPOM DE 10% OFF</span>
+          <span id="promoCode" class="promo-coupon-code">ARCOS10</span>
+        </div>
+        <button id="promoCopyBtn" class="promo-coupon-copy-btn" type="button">
+          <span id="promoCopyText">COPIAR</span>
+        </button>
+      </div>
+
+      <button type="button" id="promoCtaBtn" class="promo-cta-btn">
+        COPIAR CUPOM E ESCOLHER PLANO
+      </button>
+    </div>
+  </div>
+
+  <div id="couponToast" class="coupon-toast" role="status" aria-live="polite">
+    <span>✅ Cupom <strong>ARCOS10</strong> copiado! Escolha seu plano abaixo.</span>
+  </div>
+
+  <!-- =========================================================
+       SCRIPTS DE INTERATIVIDADE, CHECKOUT E CRO
+       ========================================================= -->
+  <script>
+    (function() {
+      // =========================================================================
+      // CONFIGURAÇÃO CENTRAL DOS LINKS DE CHECKOUT (LOWIFY / CAKTO / KIWIFY)
+      // Basta substituir as URLs abaixo pelos seus links de checkout reais:
+      // =========================================================================
+      const CHECKOUT_URLS = {
+        basico: "https://pay.lowify.com.br/checkout.php?product_id=PLANO_BASICO",
+        completo: "https://pay.lowify.com.br/checkout.php?product_id=PLANO_COMPLETO",
+        upgrade: "https://pay.lowify.com.br/checkout.php?product_id=PLANO_COMPLETO"
+      };
+
+      // 1. Data dinâmica na barra de urgência do topo
+      function updateUrgencyDate() {
+        try {
+          const d = new Date();
+          const day = String(d.getDate()).padStart(2, '0');
+          const month = String(d.getMonth() + 1).padStart(2, '0');
+          const el = document.getElementById('urgencyText');
+          if (el) {
+            el.textContent = `OFERTA EXCLUSIVA APENAS HOJE (${day}/${month})`;
+          }
+        } catch (e) {}
+      }
+      updateUrgencyDate();
+
+      // 2. Timer Regressivo de 30 minutos na Seção de Planos
+      const STORAGE_KEY = 'arcos_desconstruidos_timer_v1';
+      let targetTime;
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved && Number(saved) > Date.now()) {
+          targetTime = Number(saved);
+        } else {
+          targetTime = Date.now() + 30 * 60 * 1000;
+          localStorage.setItem(STORAGE_KEY, String(targetTime));
+        }
+      } catch (e) {
+        targetTime = Date.now() + 30 * 60 * 1000;
+      }
+
+      const timerContainer = document.getElementById('offerTimer');
+      function updateOfferTimer() {
+        if (!timerContainer) return;
+        const rem = Math.max(0, Math.ceil((targetTime - Date.now()) / 1000));
+        const hrs = String(Math.floor(rem / 3600)).padStart(2, '0');
+        const mins = String(Math.floor(rem / 60) % 60).padStart(2, '0');
+        const secs = String(rem % 60).padStart(2, '0');
+        const str = `${hrs}:${mins}:${secs}`;
+        timerContainer.innerHTML = str.split('').map(function(ch) {
+          return `<span class="${ch === ':' ? 'colon' : 'digit'}">${ch}</span>`;
+        }).join('');
+      }
+      updateOfferTimer();
+      setInterval(updateOfferTimer, 1000);
+
+      // 3. Pausa no toque para o Carrossel
+      document.querySelectorAll('.carouselRow').forEach(function(row) {
+        row.addEventListener('pointerdown', function() { row.classList.add('held'); });
+        ['pointerup', 'pointercancel', 'touchend', 'blur'].forEach(function(evt) {
+          window.addEventListener(evt, function() { row.classList.remove('held'); });
+        });
+      });
+
+      // 4. Accordion de Perguntas Frequentes (FAQ)
+      document.querySelectorAll('#faqAccordion article').forEach(function(art) {
+        const btn = art.querySelector('h3 button');
+        if (!btn) return;
+        btn.addEventListener('click', function() {
+          const isOpen = art.classList.contains('faqOpen');
+          document.querySelectorAll('#faqAccordion article').forEach(function(other) {
+            other.classList.remove('faqOpen');
+            const b = other.querySelector('h3 button');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            art.classList.add('faqOpen');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 5. Modal de Upgrade quando clica em "QUERO O PLANO BÁSICO"
+      const upgradeDialog = document.getElementById('upgradeDialog');
+      const btnBasicPlan = document.getElementById('btnBasicPlan');
+      const closeUpgradeBtn = document.getElementById('closeUpgradeBtn');
+
+      if (btnBasicPlan && upgradeDialog) {
+        btnBasicPlan.addEventListener('click', function() {
+          if (typeof upgradeDialog.showModal === 'function') {
+            upgradeDialog.showModal();
+          }
+          if (typeof fbq === 'function') {
+            fbq('trackCustom', 'CtaClick', { cta_text: 'QUERO O PLANO BASICO', target: 'modal_upgrade' });
+          }
+        });
+      }
+      if (closeUpgradeBtn && upgradeDialog) {
+        closeUpgradeBtn.addEventListener('click', function() {
+          upgradeDialog.close();
+        });
+      }
+      if (upgradeDialog) {
+        upgradeDialog.addEventListener('click', function(e) {
+          if (e.target === upgradeDialog) upgradeDialog.close();
+        });
+      }
+
+      // 6. Gerenciamento de Checkout + UTMs + Meta Pixel InitiateCheckout
+      document.querySelectorAll('[data-checkout]').forEach(function(btn) {
+        const type = btn.getAttribute('data-checkout');
+        if (CHECKOUT_URLS[type]) {
+          btn.setAttribute('href', CHECKOUT_URLS[type]);
+        }
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          let targetUrl = btn.getAttribute('href') || CHECKOUT_URLS[type];
+
+          try {
+            const currentParams = new URLSearchParams(window.location.search);
+            const destUrlObj = new URL(targetUrl, window.location.origin);
+            for (const [key, value] of currentParams.entries()) {
+              if (!destUrlObj.searchParams.has(key)) {
+                destUrlObj.searchParams.set(key, value);
+              }
+            }
+            targetUrl = destUrlObj.href;
+          } catch (err) {}
+
+          const isBasic = type === 'basico';
+          const planName = isBasic
+            ? '50 Mapas de Arcos Desconstruídos - Plano Básico'
+            : '50 Mapas de Arcos Desconstruídos - Plano Completo + 6 Bônus';
+          const planPrice = isBasic ? 17.90 : 27.90;
+
+          if (typeof fbq === 'function') {
+            fbq('track', 'InitiateCheckout', {
+              content_name: planName,
+              content_category: 'Infoproduto',
+              value: planPrice,
+              currency: 'BRL',
+              num_items: 1
+            });
+          }
+
+          btn.style.opacity = '0.75';
+          setTimeout(function() {
+            window.location.href = targetUrl;
+          }, 200);
+        });
+      });
+
+      // 7. Popup de Cupom de 10% OFF (Exit Intent)
+      const overlay = document.getElementById('promoOverlay');
+      const closeBtn = document.getElementById('promoClose');
+      const copyBtn = document.getElementById('promoCopyBtn');
+      const copyText = document.getElementById('promoCopyText');
+      const ctaBtn = document.getElementById('promoCtaBtn');
+      const toast = document.getElementById('couponToast');
+      const promoCode = 'ARCOS10';
+      let popupShown = false;
+      const pageLoadTime = Date.now();
+
+      function openPromo() {
+        if (popupShown || sessionStorage.getItem('arcos_promo_dismissed')) return;
+        popupShown = true;
+        if (overlay) {
+          overlay.classList.add('is-active');
+          overlay.setAttribute('aria-hidden', 'false');
+        }
+      }
+      function closePromo() {
+        if (overlay) {
+          overlay.classList.remove('is-active');
+          overlay.setAttribute('aria-hidden', 'true');
+          sessionStorage.setItem('arcos_promo_dismissed', '1');
+        }
+      }
+      function copyAndGoToPlans() {
+        try { navigator.clipboard.writeText(promoCode); } catch (e) {}
+        if (copyText) copyText.textContent = 'COPIADO! ✓';
+        closePromo();
+        if (toast) {
+          toast.classList.add('is-visible');
+          setTimeout(function() { toast.classList.remove('is-visible'); }, 4000);
+        }
+        const plansEl = document.getElementById('planos');
+        if (plansEl) plansEl.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closePromo);
+      if (copyBtn) copyBtn.addEventListener('click', copyAndGoToPlans);
+      if (ctaBtn) ctaBtn.addEventListener('click', copyAndGoToPlans);
+      document.addEventListener('mouseleave', function(e) {
+        if (Date.now() - pageLoadTime < 20000) return;
+        if (e.clientY <= 15) openPromo();
+      });
+    })();
+  </script>
+</body>
+</html>
