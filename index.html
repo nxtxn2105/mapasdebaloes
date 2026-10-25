@@ -71,7 +71,7 @@
     button, a { -webkit-tap-highlight-color: transparent; }
     button { font: inherit; cursor: pointer; }
     a { color: inherit; }
-    img, svg { display: block; max-width: 100%; }
+    img, svg { display: block; max-width: 100%; height: auto; }
     button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 4px;
@@ -938,10 +938,17 @@
       box-shadow: 0 6px 16px rgba(216, 46, 103, 0.3);
     }
     .planAsset {
-      margin: 16px 0 8px;
+      margin: 14px auto 10px;
       width: 100%;
+      max-width: 330px;
       border-radius: 14px;
       overflow: hidden;
+    }
+    .planAsset img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
     }
     .complete .price {
       font-size: clamp(46px, 11vw, 62px);
@@ -1916,7 +1923,7 @@
           <p class="planSubtitle">50 Mapas de Arcos Desconstruídos + 6 Bônus Exclusivos</p>
 
           <div class="planAsset">
-            <img src="./assets/planos/plano-completo.webp?v=8" alt="Plano Completo - 50 Mapas de Arcos Desconstruídos + 6 Bônus Exclusivos" loading="lazy" width="1080" height="920">
+            <img src="./assets/planos/plano-completo.webp?v=8" alt="Plano Completo - 50 Mapas de Arcos Desconstruídos + 6 Bônus Exclusivos" loading="lazy" width="1077" height="930">
           </div>
 
           <del class="anchorPrice">De R$ 147,00</del>
