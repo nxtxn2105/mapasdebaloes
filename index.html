@@ -2308,9 +2308,13 @@
       const closeUpgradeBtn = document.getElementById('closeUpgradeBtn');
 
       if (btnBasicPlan && upgradeDialog) {
-        btnBasicPlan.addEventListener('click', function() {
+        btnBasicPlan.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
           if (typeof upgradeDialog.showModal === 'function') {
             upgradeDialog.showModal();
+          } else {
+            upgradeDialog.setAttribute('open', 'open');
           }
           if (typeof fbq === 'function') {
             fbq('trackCustom', 'CtaClick', { cta_text: 'QUERO O PLANO BASICO', target: 'modal_upgrade' });
@@ -2319,60 +2323,143 @@
       }
       if (closeUpgradeBtn && upgradeDialog) {
         closeUpgradeBtn.addEventListener('click', function() {
-          upgradeDialog.close();
+          if (typeof upgradeDialog.close === 'function') upgradeDialog.close();
+          else upgradeDialog.removeAttribute('open');
         });
       }
       if (upgradeDialog) {
         upgradeDialog.addEventListener('click', function(e) {
-          if (e.target === upgradeDialog) upgradeDialog.close();
+          if (e.target === upgradeDialog) {
+            if (typeof upgradeDialog.close === 'function') upgradeDialog.close();
+            else upgradeDialog.removeAttribute('open');
+          }
         });
       }
 
-      // 6. Gerenciamento de Checkout + UTMs + Meta Pixel InitiateCheckout
+      // 6. Função de Redirecionamento Forçado para a Seção de Planos (#planos / #plano-completo)
+      function scrollToTargetSection(e, ctaElement, targetSelector) {
+        if (e && typeof e.preventDefault === 'function') {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+
+        const targetEl = document.querySelector(targetSelector || '#planos') || document.getElementById('planos');
+        if (targetEl) {
+          const headerOffset = 58; // Compensação da barra de urgência fixa no topo
+          const elementPosition = targetEl.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          if (window.history && window.history.pushState) {
+            window.history.pushState(null, '', targetSelector || '#planos');
+          }
+        }
+
+        if (typeof fbq === 'function') {
+          const btnText = ctaElement ? (ctaElement.textContent || '').trim().replace(/\s+/g, ' ') : 'CTA Conhecer Planos';
+          fbq('trackCustom', 'CtaClick', {
+            cta_text: btnText.slice(0, 50),
+            target: targetSelector || '#planos',
+            page_location: window.location.pathname
+          });
+        }
+      }
+
+      // Inicializa href dos botões de checkout caso ainda estejam com âncora (#checkout-*)
       document.querySelectorAll('[data-checkout]').forEach(function(btn) {
         const type = btn.getAttribute('data-checkout');
-        if (CHECKOUT_URLS[type]) {
+        const currentHref = btn.getAttribute('href') || '';
+        if ((!currentHref || currentHref.startsWith('#')) && CHECKOUT_URLS[type]) {
           btn.setAttribute('href', CHECKOUT_URLS[type]);
         }
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          let targetUrl = btn.getAttribute('href') || CHECKOUT_URLS[type];
-
-          try {
-            const currentParams = new URLSearchParams(window.location.search);
-            const destUrlObj = new URL(targetUrl, window.location.origin);
-            for (const [key, value] of currentParams.entries()) {
-              if (!destUrlObj.searchParams.has(key)) {
-                destUrlObj.searchParams.set(key, value);
-              }
-            }
-            targetUrl = destUrlObj.href;
-          } catch (err) {}
-
-          const isBasic = type === 'basico';
-          const planName = isBasic
-            ? '50 Mapas de Arcos Desconstruídos - Plano Básico'
-            : '50 Mapas de Arcos Desconstruídos - Plano Completo + 6 Bônus';
-          const planPrice = isBasic ? 17.90 : 27.90;
-
-          if (typeof fbq === 'function') {
-            fbq('track', 'InitiateCheckout', {
-              content_name: planName,
-              content_category: 'Infoproduto',
-              value: planPrice,
-              currency: 'BRL',
-              num_items: 1
-            });
-          }
-
-          btn.style.opacity = '0.75';
-          setTimeout(function() {
-            window.location.href = targetUrl;
-          }, 200);
-        });
       });
 
-      // 7. Popup de Cupom de 10% OFF (Exit Intent)
+      // 6.1. FORÇAR REDIRECIONAMENTO EM TODOS OS BOTÕES DE CHECKOUT (capture: true)
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('[data-checkout], a[href*="cakto"], a[href*="lowify"], a[href*="kiwify"], a[href*="checkout"], a[href*="pay."]');
+        if (!link) return;
+
+        const type = link.getAttribute('data-checkout');
+        const rawHref = link.getAttribute('href') || '';
+        let targetUrl = (rawHref && !rawHref.startsWith('#')) ? rawHref : (CHECKOUT_URLS[type] || rawHref);
+        if (!targetUrl || targetUrl.startsWith('#') || targetUrl.startsWith('javascript:')) return;
+
+        // Impede saída imediata para garantir disparo do Meta Pixel + UTMs
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Preservação e enriquecimento total de UTMs e parâmetros da URL atual
+        try {
+          const currentParams = new URLSearchParams(window.location.search);
+          const destUrlObj = new URL(targetUrl, window.location.origin);
+          for (const [key, value] of currentParams.entries()) {
+            if (!destUrlObj.searchParams.has(key)) {
+              destUrlObj.searchParams.set(key, value);
+            }
+          }
+          targetUrl = destUrlObj.href;
+        } catch (err) {}
+
+        const isBasic = type === 'basico';
+        const isUpgrade = type === 'upgrade';
+        let planName = '50 Mapas de Arcos Desconstruídos - Plano Completo + 6 Bônus';
+        let planPrice = 27.90;
+        if (isBasic) {
+          planName = '50 Mapas de Arcos Desconstruídos - Plano Básico';
+          planPrice = 17.90;
+        } else if (isUpgrade) {
+          planName = '50 Mapas de Arcos Desconstruídos - Upgrade Plano Completo';
+          planPrice = 27.90;
+        }
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: planName,
+            content_category: 'Infoproduto',
+            value: planPrice,
+            currency: 'BRL',
+            num_items: 1
+          });
+        }
+
+        link.style.opacity = '0.75';
+        link.style.pointerEvents = 'none';
+
+        let navigated = false;
+        const proceed = function() {
+          if (navigated) return;
+          navigated = true;
+          window.location.href = targetUrl;
+        };
+
+        setTimeout(proceed, 220);
+      }, true);
+
+      // 6.2. FORÇAR REDIRECIONAMENTO EM TODOS OS CTAs INTERNOS PARA #planos (capture: true)
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.promo-card')) return;
+
+        // Se for botão de checkout, já é tratado pelo handler 6.1
+        const checkoutLink = e.target.closest('[data-checkout], a[href*="cakto"], a[href*="lowify"], a[href*="kiwify"], a[href*="checkout"], a[href*="pay."]');
+        if (checkoutLink) return;
+
+        // Se for o botão que abre o modal do Plano Básico, deixa o handler do modal agir
+        const basicBtn = e.target.closest('#btnBasicPlan');
+        if (basicBtn) return;
+
+        const ctaBtn = e.target.closest('.cta, .upgradeHint, a[href="#planos"], a[href*="#planos"], a[href="#plano-completo"]');
+        if (!ctaBtn) return;
+
+        const href = ctaBtn.getAttribute('href') || '';
+        const targetSelector = href === '#plano-completo' ? '#plano-completo' : '#planos';
+        scrollToTargetSection(e, ctaBtn, targetSelector);
+      }, true);
+
+      // 7. Popup de Cupom de 10% OFF (Gatilhos: 2 min, Visualização de Planos, Exit Intent Desktop e Voltar Mobile)
       const overlay = document.getElementById('promoOverlay');
       const closeBtn = document.getElementById('promoClose');
       const copyBtn = document.getElementById('promoCopyBtn');
@@ -2382,15 +2469,22 @@
       const promoCode = 'ARCOS10';
       let popupShown = false;
       const pageLoadTime = Date.now();
+      const MIN_ENGAGEMENT_MS = 20000;
 
-      function openPromo() {
-        if (popupShown || sessionStorage.getItem('arcos_promo_dismissed')) return;
+      function canShowPopup() {
+        return !popupShown && !sessionStorage.getItem('arcos_promo_dismissed') && overlay && !overlay.classList.contains('is-active');
+      }
+
+      function triggerPopup(reason) {
+        if (!canShowPopup()) return;
         popupShown = true;
-        if (overlay) {
-          overlay.classList.add('is-active');
-          overlay.setAttribute('aria-hidden', 'false');
+        overlay.classList.add('is-active');
+        overlay.setAttribute('aria-hidden', 'false');
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'PromoPopupTriggered', { trigger: reason });
         }
       }
+
       function closePromo() {
         if (overlay) {
           overlay.classList.remove('is-active');
@@ -2398,25 +2492,81 @@
           sessionStorage.setItem('arcos_promo_dismissed', '1');
         }
       }
-      function copyAndGoToPlans() {
-        try { navigator.clipboard.writeText(promoCode); } catch (e) {}
+
+      function copyAndGoToPlans(e) {
+        try {
+          navigator.clipboard.writeText(promoCode);
+        } catch (err) {
+          const ta = document.createElement('textarea');
+          ta.value = promoCode;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
         if (copyText) copyText.textContent = 'COPIADO! ✓';
         closePromo();
         if (toast) {
           toast.classList.add('is-visible');
-          setTimeout(function() { toast.classList.remove('is-visible'); }, 4000);
+          setTimeout(function() { toast.classList.remove('is-visible'); }, 4500);
         }
-        const plansEl = document.getElementById('planos');
-        if (plansEl) plansEl.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+          scrollToTargetSection(e, ctaBtn, '#plano-completo');
+        }, 140);
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'CouponCopied', { coupon: promoCode, discount: '10%' });
+        }
       }
 
       if (closeBtn) closeBtn.addEventListener('click', closePromo);
       if (copyBtn) copyBtn.addEventListener('click', copyAndGoToPlans);
       if (ctaBtn) ctaBtn.addEventListener('click', copyAndGoToPlans);
+      if (overlay) {
+        overlay.addEventListener('click', function(e) {
+          if (e.target === overlay) closePromo();
+        });
+      }
+
+      // Gatilho 1: 2 minutos de página
+      setTimeout(function() { triggerPopup('time_2min'); }, 120000);
+
+      // Gatilho 2: Ao chegar na seção de planos (após 3.5s)
+      const plansSectionEl = document.getElementById('planos');
+      if (plansSectionEl && 'IntersectionObserver' in window) {
+        let plansTimer = null;
+        const obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (!plansTimer && canShowPopup()) {
+                plansTimer = setTimeout(function() { triggerPopup('viewed_plans'); }, 3500);
+              }
+            } else if (plansTimer) {
+              clearTimeout(plansTimer);
+              plansTimer = null;
+            }
+          });
+        }, { threshold: 0.25 });
+        obs.observe(plansSectionEl);
+      }
+
+      // Gatilho 3: Exit-intent no Desktop
       document.addEventListener('mouseleave', function(e) {
-        if (Date.now() - pageLoadTime < 20000) return;
-        if (e.clientY <= 15) openPromo();
+        if (Date.now() - pageLoadTime < MIN_ENGAGEMENT_MS) return;
+        if (e.clientY <= 15) triggerPopup('exit_desktop');
       });
+
+      // Gatilho 4: Botão Voltar no Mobile
+      setTimeout(function() {
+        try {
+          window.history.pushState({ page: 'arcos_offer' }, '', '');
+          window.addEventListener('popstate', function() {
+            if (canShowPopup() && (Date.now() - pageLoadTime >= MIN_ENGAGEMENT_MS)) {
+              triggerPopup('exit_mobile_back');
+              window.history.pushState({ page: 'arcos_offer' }, '', '');
+            }
+          });
+        } catch (err) {}
+      }, 5000);
     })();
   </script>
 </body>
