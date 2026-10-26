@@ -1435,7 +1435,7 @@
         <div class="heroPill"><span class="emoji">🛠️</span> <span>Montagem visual passo a passo</span></div>
       </div>
 
-      <a href="#plano-completo" class="cta">
+      <a href="#planos" class="cta">
         QUERO OS 50 MAPAS
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -2228,20 +2228,20 @@
           e.stopPropagation();
         }
 
+        const headerOffset = 58; // Compensação da barra de urgência fixa no topo
+        const completeEl = document.getElementById('plano-completo');
         const targetEl = document.querySelector(targetSelector || '#planos') || document.getElementById('planos');
-        if (targetEl) {
-          const headerOffset = 58; // Compensação da barra de urgência fixa no topo
-          const elementPosition = targetEl.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-
-          if (window.history && window.history.pushState) {
-            window.history.pushState(null, '', targetSelector || '#planos');
-          }
+        if (targetSelector === '#plano-completo' && completeEl) {
+          const offsetPosition = completeEl.getBoundingClientRect().top + window.pageYOffset - headerOffset - 12;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        } else if (completeEl && window.innerWidth < 860) {
+          // No mobile, enquadra o final do Plano Básico + destaque principal no Plano Completo (exatamente como no print)
+          const offsetPosition = completeEl.getBoundingClientRect().top + window.pageYOffset - headerOffset - 265;
+          window.scrollTo({ top: Math.max(0, offsetPosition), behavior: 'smooth' });
+        } else if (targetEl) {
+          const offsetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
 
         if (typeof fbq === 'function') {
